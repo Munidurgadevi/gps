@@ -1,0 +1,8 @@
+/* ============================================================
+   contact.css — Contact page
+   Page-specific styles only. Shared styles live in base.css.
+   ============================================================ */
+
+.contact-grid{grid-template-columns:1fr;margin-top:30px}
+.contact-placeholder{min-height:300px;display:grid;place-items:center;text-align:center;background:linear-gradient(135deg,rgba(217,185,120,.22),transparent)}
+.centered{margin:auto}

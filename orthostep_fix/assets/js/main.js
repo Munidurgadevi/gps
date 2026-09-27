@@ -1,0 +1,9 @@
+const body=document.body;const menu=document.querySelector('.nav-menu');const hamburger=document.querySelector('.hamburger');
+const savedTheme=localStorage.getItem('theme');if(savedTheme==='dark')body.classList.add('dark');
+const savedDir=localStorage.getItem('dir');if(savedDir==='rtl')body.classList.add('rtl');
+function updateIcon(){document.querySelectorAll('[data-theme]').forEach(b=>b.innerHTML=body.classList.contains('dark')?'<i data-lucide="sun"></i>':'<i data-lucide="moon"></i>');document.querySelectorAll('[data-rtl]').forEach(b=>b.innerHTML=body.classList.contains('rtl')?'<i data-lucide="align-right"></i>':'<i data-lucide="align-left"></i>');if(window.lucide)lucide.createIcons()}
+document.querySelectorAll('[data-theme]').forEach(b=>b.addEventListener('click',()=>{body.classList.toggle('dark');localStorage.setItem('theme',body.classList.contains('dark')?'dark':'light');updateIcon()}));
+document.querySelectorAll('[data-rtl]').forEach(b=>b.addEventListener('click',()=>{body.classList.toggle('rtl');localStorage.setItem('dir',body.classList.contains('rtl')?'rtl':'ltr');updateIcon()}));
+if(hamburger)hamburger.addEventListener('click',()=>menu.classList.toggle('open'));document.querySelectorAll('.nav-menu a').forEach(a=>a.addEventListener('click',()=>menu?.classList.remove('open')));
+document.querySelectorAll('[data-eye]').forEach(btn=>btn.addEventListener('click',()=>{const input=document.getElementById(btn.dataset.eye);input.type=input.type==='password'?'text':'password';btn.innerHTML=input.type==='password'?'<i data-lucide="eye"></i>':'<i data-lucide="eye-off"></i>';lucide.createIcons()}));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));updateIcon();if(window.lucide)lucide.createIcons();

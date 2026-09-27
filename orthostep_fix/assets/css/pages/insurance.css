@@ -1,0 +1,20 @@
+/* ============================================================
+   insurance.css — Insurance & Prescription page
+   Page-specific styles only. Shared styles live in base.css.
+   ============================================================ */
+
+.faq {
+    display: grid;
+    gap: 12px
+}
+.faq details {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 20px 22px;
+    background: var(--surface)
+}
+.faq summary {
+    font-weight: 800;
+    cursor: pointer
+}
+.mt-10{margin-top:10px}

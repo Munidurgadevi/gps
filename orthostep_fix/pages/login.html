@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sign In | ARTHROSTRIDE</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/pages/login.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+
+<body class="auth-page">
+    <div class="auth-tools"><button class="icon-btn" data-theme aria-label="Toggle dark mode"><i
+                data-lucide="moon"></i></button><button class="icon-btn" data-rtl aria-label="Toggle RTL"><i data-lucide="align-left"></i></button></div>
+    <div class="auth-card"><a class="brand auth-brand" href="../index.html"><img src="https://i.ibb.co/9JhJwDB/Chat-GPT-Image-Sep-27-2026-02-57-19-PM.png"
+                alt="ARTHROSTRIDE logo"><span>ARTHROSTRIDE</span></a>
+        <h1>Welcome back.</h1>
+        <p class="lead">Sign in to manage your ARTHROSTRIDE requests and saved details.</p>
+        <form class="form-grid">
+            <div class="field"><label>Email</label><input type="email" placeholder="you@example.com" required></div>
+            <div class="field"><label>Password</label>
+                <div class="password-wrap"><input id="loginPass" type="password" placeholder="Your password"
+                        required><button type="button" data-eye="loginPass" aria-label="Show password"><i
+                            data-lucide="eye"></i></button></div>
+            </div>
+            <div class="inline-row"><label><input type="checkbox"> Remember me</label><a href="#">Forgot password?</a>
+            </div><button class="btn btn-primary" type="submit">Sign in</button>
+        </form>
+        <div class="login-divider"><span
+                class="divider-line"></span>or continue with<span
+                class="divider-line"></span></div>
+        <div class="social-login"><button class="btn btn-secondary"><b>G</b> Google</button><button
+                class="btn btn-secondary"><i data-lucide="apple"></i> Apple</button></div>
+        <p class="form-note">New here? <a href="signup.html"
+                class="primary-link">Create an account</a></p>
+    </div>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+/* Right-to-left layout overrides */
+.rtl { direction: rtl; }
+.rtl .nav-actions { justify-content: flex-start; }
+.rtl .hero-grid,
+.rtl .feature-grid { direction: rtl; }
+.rtl .hero-card { left: auto; right: -25px; }
+.rtl .nav-menu a:after { left: auto; right: 0; }
+.rtl .floating-note { right: auto; left: 20px; }
+.rtl .footer-grid,
+.rtl .section-head { text-align: right; }
+
+/* Auth pages (login / signup) */
+.rtl .auth-tools { right: auto; left: 25px; }
+.rtl .password-wrap input { padding-right: 15px; padding-left: 48px; }
+.rtl .password-wrap button { right: auto; left: 8px; }
+
+@media(max-width:1100px) {
+    .rtl .hero-card { right: 0; }
+}
